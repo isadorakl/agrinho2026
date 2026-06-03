@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Água na Medida Certa - Agrinho 2026</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<header>
+  <h1>💧 Água na Medida Certa</h1>
+  <p>Projeto Agrinho 2026</p>
+  <button onclick="scrollPara('problema')">Descubra como economizar água</button>
+</header>
+
+<nav>
+  <a href="#problema">Problema</a>
+  <a href="#impactos">Impactos</a>
+  <a href="#solucoes">Soluções</a>
+  <a href="#quiz">Quiz</a>
+  <a href="#calculadora">Calculadora</a>
+</nav>
+
+<section id="problema">
+  <h2>🌎 O Problema</h2>
+  <p>Muita água é desperdiçada na irrigação devido a sistemas ineficientes e aplicação incorreta.</p>
+</section>
+
+<section id="impactos">
+  <h2>📊 Impactos</h2>
+  <div class="numeros">
+    <div class="numero"><h2>70%</h2><p>da água doce é usada na agricultura</p></div>
+    <div class="numero"><h2>30%</h2><p>pode ser desperdiçada</p></div>
+    <div class="numero"><h2>+1000L</h2><p>podem ser economizados por dia</p></div>
+  </div>
+  <canvas id="graficoSistemas" width="400" height="200"></canvas>
+</section>
+
+<section id="solucoes">
+  <h2>🌱 Soluções Sustentáveis</h2>
+  <div class="cards">
+    <div class="card"><h3>💧 Gotejamento</h3><p>Água diretamente às raízes, reduzindo perdas.</p></div>
+    <div class="card"><h3>📡 Sensores</h3><p>Aplicam água somente quando necessário.</p></div>
+    <div class="card"><h3>🌦 Previsão do Tempo</h3><p>Evita irrigação antes de chuvas.</p></div>
+    <div class="card"><h3>♻ Reaproveitamento</h3><p>Uso consciente da água disponível.</p></div>
+  </div>
+</section>
+
+<section id="quiz">
+  <h2>🎮 Quiz Interativo</h2>
+  <p>Qual sistema economiza mais água?</p>
+  <button onclick="respostaQuiz('errada')">Aspersão</button>
+  <button onclick="respostaQuiz('errada')">Inundação</button>
+  <button onclick="respostaQuiz('certa')">Gotejamento</button>
+  <p id="mensagemQuiz"></p>
+</section>
+
+<section id="calculadora">
+  <h2>🧮 Calculadora de Economia</h2>
+  <label>Área da plantação (m²):</label>
+  <input type="number" id="area">
+  <label>Consumo diário de água (L):</label>
+  <input type="number" id="consumo">
+  <button onclick="calcularEconomia()">Calcular Economia</button>
+  <p id="resultadoCalculadora"></p>
+</section>
+
+<footer>
+  <p>Projeto Agrinho 2026 - Água na Medida Certa</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
