@@ -1,46 +1,45 @@
-// Smooth scroll
-function scrollPara(id){
-  document.getElementById(id).scrollIntoView({behavior:'smooth'});
+// Script para o quiz sobre economia de água na irrigação
+
+document.getElementById('quizBtn').addEventListener('click', iniciarQuiz);
+
+function iniciarQuiz() {
+    const container = document.getElementById('quizContainer');
+    container.innerHTML = '';
+
+    const pergunta = document.createElement('p');
+    pergunta.textContent = 'Qual das opções abaixo ajuda a economizar água na irrigação?';
+
+    const opcoes = [
+        { texto: 'Regar durante as horas mais quentes do dia', correta: false },
+        { texto: 'Usar sistemas de irrigação por gotejamento', correta: true },
+        { texto: 'Deixar o solo secar entre as irrigações', correta: false },
+        { texto: 'Aumentar a quantidade de água toda vez que irrigar', correta: false }
+    ];
+
+    container.appendChild(pergunta);
+
+    opcoes.forEach((opcao, index) => {
+        const btn = document.createElement('button');
+        btn.textContent = opcao.texto;
+        btn.addEventListener('click', () => {
+            verificarResposta(opcao.correta, container);
+        });
+        container.appendChild(btn);
+    });
 }
 
-// Quiz
-function respostaQuiz(res){
-  const mensagem = document.getElementById('mensagemQuiz');
-  if(res==='certa'){
-    mensagem.textContent = '✅ Correto! O gotejamento economiza mais água.';
-    mensagem.style.color = 'green';
-  } else {
-    mensagem.textContent = '❌ Errado! Tente novamente.';
-    mensagem.style.color = 'red';
-  }
+function verificarResposta(correta, container) {
+    const resultado = document.createElement('p');
+    if (correta) {
+        resultado.textContent = 'Parabéns! Você conhece dicas para economizar água.';
+        resultado.style.color = 'green';
+    } else {
+        resultado.textContent = 'Tente novamente! Veja as dicas para economizar água.';
+        resultado.style.color = 'red';
+    }
+    // Remove botões antigos
+    while (container.children.length > 1) {
+        container.removeChild(container.lastChild);
+    }
+    container.appendChild(resultado);
 }
-
-// Calculadora
-function calcularEconomia(){
-  const area = Number(document.getElementById('area').value);
-  const consumo = Number(document.getElementById('consumo').value);
-  if(area>0 && consumo>0){
-    const economia = (consumo*0.3).toFixed(2); // 30% economia
-    document.getElementById('resultadoCalculadora').textContent = `💧 Você pode economizar cerca de ${economia} litros por dia!`;
-  } else{
-    document.getElementById('resultadoCalculadora').textContent = 'Preencha valores válidos.';
-  }
-}
-
-// Gráfico interativo
-const ctx = document.getElementById('graficoSistemas').getContext('2d');
-const graficoSistemas = new Chart(ctx, {
-  type: 'bar',
-  data: {
-    labels: ['Gotejamento', 'Aspersão', 'Inundação'],
-    datasets: [{
-      label: 'Eficiência (%)',
-      data: [95, 75, 55],
-      backgroundColor: ['#2E7D32','#4CAF50','#81C784']
-    }]
-  },
-  options: {
-    responsive:true,
-    plugins:{legend:{display:false}},
-    scales:{y:{beginAtZero:true,max:100}}
-  }
