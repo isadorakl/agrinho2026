@@ -1,76 +1,73 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Água na Medida Certa - Agrinho 2026</title>
-<link rel="stylesheet" href="style.css">
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desperdício de Água na Irrigação</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+    <header>
+        <h1>Agro forte, futuro sustentável</h1>
+        <h2>Desperdício de Água na Irrigação das Plantações</h2>
+    </header>
 
-<header>
-  <h1>💧 Água na Medida Certa</h1>
-  <p>Projeto Agrinho 2026</p>
-  <button onclick="scrollPara('problema')">Descubra como economizar água</button>
-</header>
+    <section id="introducao">
+        <h3>Introdução</h3>
+        <p>
+            A irrigação é essencial para garantir boas colheitas, mas o uso excessivo ou incorreto de água pode levar ao desperdício e prejudicar o meio ambiente. Este projeto aborda o problema do desperdício de água na irrigação e apresenta dicas para tornar esse uso mais sustentável.
+        </p>
+    </section>
 
-<nav>
-  <a href="#problema">Problema</a>
-  <a href="#impactos">Impactos</a>
-  <a href="#solucoes">Soluções</a>
-  <a href="#quiz">Quiz</a>
-  <a href="#calculadora">Calculadora</a>
-</nav>
+    <section id="problema">
+        <h3>O Problema</h3>
+        <p>
+            Muitas plantações utilizam métodos de irrigação que consomem mais água do que o necessário, causando escassez hídrica, afetando rios e reservatórios, além de aumentar os custos para os agricultores.
+        </p>
+    </section>
 
-<section id="problema">
-  <h2>🌎 O Problema</h2>
-  <p>Muita água é desperdiçada na irrigação devido a sistemas ineficientes e aplicação incorreta.</p>
-</section>
+    <section id="solucao">
+        <h3>Soluções e Dicas</h3>
+        <ul>
+            <li>Utilizar sistemas de irrigação por gotejamento.</li>
+            <li>Regar nas horas mais frescas do dia, como manhã e fim de tarde.</li>
+            <li>Monitorar a umidade do solo para evitar irrigar demais.</li>
+            <li>Reaproveitar a água da chuva sempre que possível.</li>
+        </ul>
+    </section>
 
-<section id="impactos">
-  <h2>📊 Impactos</h2>
-  <div class="numeros">
-    <div class="numero"><h2>70%</h2><p>da água doce é usada na agricultura</p></div>
-    <div class="numero"><h2>30%</h2><p>pode ser desperdiçada</p></div>
-    <div class="numero"><h2>+1000L</h2><p>podem ser economizados por dia</p></div>
-  </div>
-  <canvas id="graficoSistemas" width="400" height="200"></canvas>
-</section>
+    <section id="interativo">
+        <h3>Teste seus conhecimentos</h3>
+        <p>Responda ao quiz e descubra dicas para economizar água na irrigação!</p>
+        <button id="quizBtn">Iniciar Quiz</button>
+        <div id="quizContainer"></div>
+    </section>
 
-<section id="solucoes">
-  <h2>🌱 Soluções Sustentáveis</h2>
-  <div class="cards">
-    <div class="card"><h3>💧 Gotejamento</h3><p>Água diretamente às raízes, reduzindo perdas.</p></div>
-    <div class="card"><h3>📡 Sensores</h3><p>Aplicam água somente quando necessário.</p></div>
-    <div class="card"><h3>🌦 Previsão do Tempo</h3><p>Evita irrigação antes de chuvas.</p></div>
-    <div class="card"><h3>♻ Reaproveitamento</h3><p>Uso consciente da água disponível.</p></div>
-  </div>
-</section>
+    <section id="relaciona">
+        <h3>Relação com a Sustentabilidade</h3>
+        <p>
+            Economizar água na irrigação ajuda a preservar os recursos naturais, evita o esgotamento de rios e reservatórios, e contribui para um futuro mais sustentável no campo.
+        </p>
+    </section>
 
-<section id="quiz">
-  <h2>🎮 Quiz Interativo</h2>
-  <p>Qual sistema economiza mais água?</p>
-  <button onclick="respostaQuiz('errada')">Aspersão</button>
-  <button onclick="respostaQuiz('errada')">Inundação</button>
-  <button onclick="respostaQuiz('certa')">Gotejamento</button>
-  <p id="mensagemQuiz"></p>
-</section>
+    <section id="conclusao">
+        <h3>Conclusão</h3>
+        <p>
+            O uso consciente da água na irrigação é fundamental para garantir a sustentabilidade da agricultura e a preservação do meio ambiente. Pequenas ações podem fazer grande diferença!
+        </p>
+    </section>
 
-<section id="calculadora">
-  <h2>🧮 Calculadora de Economia</h2>
-  <label>Área da plantação (m²):</label>
-  <input type="number" id="area">
-  <label>Consumo diário de água (L):</label>
-  <input type="number" id="consumo">
-  <button onclick="calcularEconomia()">Calcular Economia</button>
-  <p id="resultadoCalculadora"></p>
-</section>
+    <section id="referencias">
+        <h3>Referências</h3>
+        <p>
+            Dados e dicas extraídas de fontes de educação ambiental e agricultura sustentável.
+        </p>
+    </section>
 
-<footer>
-  <p>Projeto Agrinho 2026 - Água na Medida Certa</p>
-</footer>
+    <footer>
+        <p>Projeto desenvolvido por [Seu Nome] - Escola XYZ</p>
+    </footer>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
